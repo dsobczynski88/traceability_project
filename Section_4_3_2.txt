@@ -1,0 +1,53 @@
+R13 – CORRECT SPELLING 
+Definition: 
+Use correct spelling. 
+Elaboration: 
+Incorrect spelling can lead to ambiguity and confusion.  Some words may sound the same but, 
+depending on the spelling, will have entirely different meaning.  For example, “red” versus “read”, 
+“ordinance” versus “ordnance”, or “brake” versus “break”.  
+In other cases, the word could be spelled the same, but have a different meaning or the meaning 
+changes depending on the context of which it is used.  For example, "clear windscreen" and 
+"clear the screen” contain 2 different meanings for "clear", one is an adjective, and the other a 
+verb.  In addition, the word “sound” could be ambiguous as it can be a noun, a verb, adverb, or 
+adjective.  In these cases, a spell checker cannot distinguish the meaning nor context not finding 
+these kinds of errors. 
+A requirement that has spelling errors is not correct (C8) and may not be Verifiable/Validatable 
+(C7). 
+In addition to misspelling, this rule also refers to the proper use of: 
+• Capital letters in acronyms: avoid “SYRD” and “SyRD” in the same set of needs and 
+requirements. 
+• Capital letters in other non-acronyms concepts: avoid “Requirements Working Group” and 
+“Requirements working group” in the same set of needs and requirements. 
+• Proper use of hyphenation: “non-functional” versus “nonfunctional.” Often hyphenation is used 
+when two related words are used as adjectives but is not used when used as a noun. 
+• Proper form for compound words.  Compound words are when two or more words combine to 
+form a new single word or a phrase that acts like a single word. There are three different 
+types of compound words in grammar: open compound words with spaces between the words 
+(ice cream), closed compound words with no spaces (firefighter), and hyphenated compound 
+words (up to date).  The project team needs to agree on how specific compound words are to 
+be formed, define them in the project glossary, and be consistent in their use. 
+Many word processing applications are capable of doing a spelling check as text is entered based 
+on a built-in dictionary and a user defined dictionary.  When using an application specific spelling 
+dictionary, project-specific vocabulary items or terms may be flagged as misspelled words as they 
+may not be included in the application’s internal core dictionary. Therefore, the spellchecking can 
+be regarded as a project-specific aspect. If practical, these terms should be added to a user 
+defined dictionary within the application, if allowed. 
+ 
+Examples: 
+Unacceptable: The Weapon_System shall store the location of each ordinance.   
+[This is unacceptable because the word “ordinance” means regulation or law.  It is unlikely that 
+the Weapon_System is interested in the location of ordinance (regulations).  In the context of a 
+Guide to Writing Requirements  81 
+ 
+ 
+INCOSE-TP-2010-006-04| VERS/REV:4  |  1 July 2023   
+weapon system, what the authors meant to use is "ordnance" as in weapons and ammunition, 
+not “ordinance”.] 
+Improved: The Weapon_System shall store the Location of each Ordnance.   
+[Note that “Location” and “Ordnance” must be defined in the glossary or data dictionary to be 
+explicit about the types of weapons and ammunition.  The action “store” needs to be further 
+evaluated to determine if that is an appropriate action (verb) for the Weapon_System vs a user 
+interacting with the Weapon_System as discussed in R3.  Additionally, to be complete any 
+specific performance measures and conditions should be included within the requirement 
+statement.] 
+ 

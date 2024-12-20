@@ -1,0 +1,304 @@
+4.3 Non-ambiguity 
+4.3.1 R12 – CORRECT GRAMMAR 
+Definition: 
+Use correct grammar. 
+Elaboration: 
+We interpret language based on the rules of grammar.  Incorrect grammar leads to ambiguity and 
+clouds understanding.  This is especially true when the recipient of the need statement or 
+requirement statement is working in a second language relying on specific rules of grammar.  If 
+these rules are not followed, that person may misinterpret the meaning of the need statement or 
+requirement statement. 
+Incorrect use of grammar may make the true intent unclear resulting in an incorrect requirement 
+and thus make it difficult to verify the SOI meets the intent of the requirement. 
+Care must be taken when translating need statements and requirement statements from one 
+language to another and when sentence structure differs depending on the language in which the 
+Guide to Writing Requirements  79 
+ 
+ 
+INCOSE-TP-2010-006-04| VERS/REV:4  |  1 July 2023  
+original need or requirement statement was written.  Punctuation varies from language to 
+language and even between dialects of a given language.   
+Be cautious when need statements and requirement statements must be translated.  An 
+interesting exercise is to translate a requirement statement from one language to another and 
+translate the result back to the original language. 
+Many word processing applications are capable of applying a set of grammar rules based on a 
+set of built-in rules that are selectable.  When using an application specific set of grammar rules, 
+project-specific grammar items may be flagged as incorrect as they may not be applicable to the 
+project’s use of grammar. Therefore, the application grammar checking can be regarded as a 
+project-specific aspect. Many applications allow the user to “turn off” or “ignore” grammar rules 
+that do not apply to the project. 
+See also R4 - Define terms. 
+ 
+Examples: 
+Unacceptable: The Weapon_System shall storing the location of all ordnance.   
+[This is unacceptable because the grammatical error leads to uncertainty about the meaning.] 
+Improved: The Weapon_System shall store the location of all Ordnance.   
+[Note that “Ordnance” must be defined in the glossary to be explicit about the types of weapons 
+and ammunition. Also, where the location is to be stored and the format of the data, must be 
+addressed. The action “store” needs to be further evaluated to determine if that is an 
+appropriate action (verb) for the Weapon_System vs a user interacting with the 
+Weapon_System as discussed in R3.  Additionally, to be complete any specific performance 
+measures and conditions should be included within the requirement statement.] 
+ 
+Unacceptable: When in the Active_State, the Record_Subsystem shall display each of the 
+Names of the Line_Items, without obscuring the User_ID per <Display Standard xyz>. 
+[This is unacceptable because the grammatical error involving the inappropriate placement of 
+“each of”—it is most likely that a Line_Item has only one name.] 
+Improved: When in the Active_State, the Record_Subsystem shall display on <Display Device> 
+the Name of each Line_Item, without obscuring the User_ID per <Display Standard XYZ.>.  
+[This is acceptable the ambiguity has been addressed.  The requirement is now more complete 
+in that it references where the information is to be display and the standard to be used 
+concerning the display of the information. If there are any performance measures that apply, 
+they would also need to be addressed.] 
+ 
+Unacceptable: The <corporate website> shall only use Approved_Fonts. 
+[This is unacceptable because it mandates that the website shall only use the designated 
+fonts—that is, it is not expected to perform any other function except to use those fonts. This is 
+clearly not what is meant but becomes ambiguous by the inappropriate grammar and the 
+incorrect placement of the word “only”. What is most likely meant is that the only fonts to be 
+used are the approved fonts defined in the organization’s display standard.] 
+Improved: The <corporate website> shall display information using Approved_Fonts defined in 
+<Display Standard xyz>. 
+Guide to Writing Requirements  80 
+ 
+ 
+INCOSE-TP-2010-006-04| VERS/REV:4  |  1 July 2023   
+[This is better because the ambiguity has been addressed.  To be acceptable, any conditions 
+and qualifying clauses would also need to be added.  If the organization has a standard for 
+displaying information that addresses acceptable fonts, font sizes, colors, spacing, human 
+factors, etc., the requirement should refer to that standard.] 
+ 
+4.3.2 R13 – CORRECT SPELLING 
+Definition: 
+Use correct spelling. 
+Elaboration: 
+Incorrect spelling can lead to ambiguity and confusion.  Some words may sound the same but, 
+depending on the spelling, will have entirely different meaning.  For example, “red” versus “read”, 
+“ordinance” versus “ordnance”, or “brake” versus “break”.  
+In other cases, the word could be spelled the same, but have a different meaning or the meaning 
+changes depending on the context of which it is used.  For example, "clear windscreen" and 
+"clear the screen” contain 2 different meanings for "clear", one is an adjective, and the other a 
+verb.  In addition, the word “sound” could be ambiguous as it can be a noun, a verb, adverb, or 
+adjective.  In these cases, a spell checker cannot distinguish the meaning nor context not finding 
+these kinds of errors. 
+A requirement that has spelling errors is not correct (C8) and may not be Verifiable/Validatable 
+(C7). 
+In addition to misspelling, this rule also refers to the proper use of: 
+• Capital letters in acronyms: avoid “SYRD” and “SyRD” in the same set of needs and 
+requirements. 
+• Capital letters in other non-acronyms concepts: avoid “Requirements Working Group” and 
+“Requirements working group” in the same set of needs and requirements. 
+• Proper use of hyphenation: “non-functional” versus “nonfunctional.” Often hyphenation is used 
+when two related words are used as adjectives but is not used when used as a noun. 
+• Proper form for compound words.  Compound words are when two or more words combine to 
+form a new single word or a phrase that acts like a single word. There are three different 
+types of compound words in grammar: open compound words with spaces between the words 
+(ice cream), closed compound words with no spaces (firefighter), and hyphenated compound 
+words (up to date).  The project team needs to agree on how specific compound words are to 
+be formed, define them in the project glossary, and be consistent in their use. 
+Many word processing applications are capable of doing a spelling check as text is entered based 
+on a built-in dictionary and a user defined dictionary.  When using an application specific spelling 
+dictionary, project-specific vocabulary items or terms may be flagged as misspelled words as they 
+may not be included in the application’s internal core dictionary. Therefore, the spellchecking can 
+be regarded as a project-specific aspect. If practical, these terms should be added to a user 
+defined dictionary within the application, if allowed. 
+ 
+Examples: 
+Unacceptable: The Weapon_System shall store the location of each ordinance.   
+[This is unacceptable because the word “ordinance” means regulation or law.  It is unlikely that 
+the Weapon_System is interested in the location of ordinance (regulations).  In the context of a 
+Guide to Writing Requirements  81 
+ 
+ 
+INCOSE-TP-2010-006-04| VERS/REV:4  |  1 July 2023   
+weapon system, what the authors meant to use is "ordnance" as in weapons and ammunition, 
+not “ordinance”.] 
+Improved: The Weapon_System shall store the Location of each Ordnance.   
+[Note that “Location” and “Ordnance” must be defined in the glossary or data dictionary to be 
+explicit about the types of weapons and ammunition.  The action “store” needs to be further 
+evaluated to determine if that is an appropriate action (verb) for the Weapon_System vs a user 
+interacting with the Weapon_System as discussed in R3.  Additionally, to be complete any 
+specific performance measures and conditions should be included within the requirement 
+statement.] 
+ 
+4.3.3 R14 – CORRECT PUNCTUATION 
+Definition: 
+Use correct punctuation. 
+Elaboration: 
+Incorrect punctuation can cause confusion between sub-clauses in a need or requirement 
+statement.  
+A need or requirement statement with incorrect punctuation is not Correct (C8) 
+Note also that the more punctuation in a need or requirement statement, the greater the 
+opportunity for ambiguity. 
+Many word processing applications are capable of applying a set of punctuation rules as text is 
+entered based on a set of built-in rules that are selectable.  When using an application specific 
+set of punctuation rules, project-specific punctuation items may be flagged as incorrect as they 
+may not be applicable to the project’s use of punctuation. Therefore, the application punctuation 
+checking can be regarded as a project-specific aspect. Many applications allow the user to “turn 
+off” or “ignore” punctuation rules that do not apply to the project. 
+ 
+Examples: 
+Unacceptable: The Navigation_Beacon shall provide Augmentation_Data having the 
+characteristics defined in <ICD xyz> to each Maritime_User, engaged in 
+Harbor_Harbor_Approach_Maneuvering (HHA) at an accuracy of less than 20 meters.   
+[This is unacceptable because the incorrectly placed comma in this sentence confuses the 
+meaning, leading the reader to believe that the accuracy is related to the maneuver rather than 
+to the augmentation data.]  
+Improved: The Navigation_Beacon shall provide Navigation_Data having the characteristics 
+defined in <ICD xyz> to each Maritime_User engaged in Harbor_Harbor_Approach_Maneuvering 
+(HHA), at an accuracy of less than 20 meters. 
+[The positioning of the comma now makes it clear that the accuracy and availability relate to the 
+data. Also note that, while performance measures are included, the appropriate conditions are 
+not addressed.  Further “Navigation_Beacon”, “Navigation_Data”, “Maritime_User”, and 
+“Harbor_Harbor_Approach_Maneuvering (HHA)” must be defined in the glossary or data 
+dictionary.]  
+ 
+Guide to Writing Requirements  82 
+ 
+ 
+INCOSE-TP-2010-006-04| VERS/REV:4  |  1 July 2023   
+4.3.4 R15 – LOGICAL EXPRESSIONS 
+Definition: 
+Use a defined convention to express logical expressions such as “[X AND Y]”, “[X OR Y]”,  
+[X XOR Y]”, “NOT [X OR Y]”. 
+Elaboration: 
+As with the other rules and characteristics, we want to keep requirement statements as one 
+thought with singular statements.  Thus, we avoid using “and” when it involves tying two thoughts 
+together.  However, it is acceptable to use “AND”, “OR”, “XOR”, and “NOT” in a logical sense 
+when talking about conditions to which the verb applies.  All logical expressions decompose to 
+either “true” or “false”, resulting in a singular statement. 
+Examples of conventions: 
+1. Place conjunctions in italics or in all capitals (AND, OR, XOR, NOT) to indicate that the 
+author intends the conjunction to play a role in a condition. 
+2. Place conditions within square brackets, also using the brackets to control their scope. 
+For example, “[X AND Y].” 
+Further, use of “and/or” is non-specific and therefore ambiguous.  The most common 
+interpretation of the expression “and/or” is as an inclusive OR: either X OR Y OR both.   
+• If an inclusive OR is intended, that should be written as “at least one of <the two or more 
+requirements>”.   
+• If an Exclusive OR is intended, that should be written as “Either <Requirement 1> OR 
+<Requirement 2> but NOT both”, and similar wording. 
+Note that caution should be used when including logical expressions in requirement statements.  
+In many cases the use of logical expressions is more appropriate to design output 
+specifications/requirements.  Design Input Requirements should focus on why the logical actions 
+are needed - prevent something bad from happening, for example,  
+The use of logical expressions within requirement statements is appropriate when stating “under 
+what conditions” apply to a need or requirement.  For example, an action that must take place 
+based on whether at logical condition is true or false. 
+Also see R19 and R20. 
+ 
+Examples: 
+Unacceptable: The Engine_Management_System shall disengage the 
+Speed_Control_Subsystem within <TBD seconds> when the Cruise_Control is engaged, and the 
+Driver applies the Accelerator.   
+[This is unacceptable because of the ambiguity of “and” could be confused with combining two 
+separate thoughts.  Instead use the form of a logical expression [X AND Y].] 
+Improved: When [the Cruise_Control is Engaged] AND [the Accelerator is Applied], the 
+Engine_Management_System shall Disengage the Speed_Control_Subsystem within <TBD 
+seconds>.  
+[“Engine_Management_System”, “Speed_Control_Subsystem”, “Disengage”, “Engaged”, 
+“Accelerator”, “Applied”, and “Cruise_Control” must be defined in the glossary or data dictionary.] 
+ 
+Guide to Writing Requirements  83 
+ 
+ 
+INCOSE-TP-2010-006-04| VERS/REV:4  |  1 July 2023   
+Exceptions and relationships: 
+While R21: Avoid Parentheses states that parentheses or brackets are to be avoided within 
+general sentence structure, this rule suggests that brackets may be used as part of a convention to 
+avoid ambiguity when expressing a logical expression.   
+4.3.5 R16 – USE OF “NOT” 
+Definition: 
+Avoid the use of the word “not”. 
+Elaboration: 
+The presence of the word “not” in a need statement or requirement statement implies “not ever”, 
+which is impossible to verify in a finite time, in which case, the need statement or requirement 
+statement is not correct (C8). 
+In theory, there is a large number of actions the system should not do.  Such statements should be 
+re-written in the positive—that is, referring to what the entity is to do, rather than what it is not to do. 
+Rewriting the need statement or requirement statement to avoid the use of “not” results in a need or 
+statement requirement statement that is clearer and is verifiable/validatable (C7). 
+ 
+Examples: 
+Unacceptable: The <SOI> shall not fail.   
+[This is unacceptable because verification of the requirement would require infinite time. The 
+requirement is also infeasible in that, as written, the implication is to never fail, under any 
+conditions.] 
+Improved:  
+The <SOI> shall have an Availability of greater than or equal to 95%.  or  
+The <SOI> shall have a Mean Time Between Failures (MTBF) of xx operating hours. 
+[For quality requirements, it would be more precise in the above were written as need 
+statements.  Then those transforming the quality need statements into requirement statements 
+would define feasible concepts that would result in the needed quality attributes and derive well
+formed requirements on the <SOI> that would result in those needs to be met.] 
+Unacceptable: The <SOI> shall not contain mercury.   
+[This is unacceptable because verification of the requirement would require the ability to 
+measure the amount of mercury with infinite accuracy and precision.  In addition, the real 
+requirement may not be stated, for example, the real concern may be the use of toxic materials, 
+not just mercury.  If that is the case, it may be best to reference a standard from a governmental 
+agency concerning allowable exposures to a list of common toxic materials.] 
+Improved: The <SOI> shall limit metallic mercury exposure to those coming in contact with the 
+<SOI> to less than or equal 0.025 mg/m3 over a period of 8 hours. 
+ 
+Exceptions and relationships: 
+It may be reasonable to include “not” in a requirement when the logical “NOT” is implied—for 
+example when using not [X or Y].  In that case, however, in accordance with R15, it may be better 
+to capitalize the “NOT” to make the logical condition explicit: NOT [X or Y].   
+Guide to Writing Requirements  84 
+ 
+ 
+INCOSE-TP-2010-006-04| VERS/REV:4  |  1 July 2023   
+There may be other cases such as “The <SOI> shall not be red in color.”, which is stating a 
+constraint and is verifiable, as long as the range of shades of red is stated (RBG rr,bb,gg range or 
+a “name” of red in some standard).   
+The key consideration is verification.  If the “not” can be unambiguously verified, then its use is 
+acceptable. 
+ 
+4.3.6 R17 – USE OF OBLIQUE SYMBOL 
+Definition: 
+Avoid the use of the oblique (“/”) symbol. 
+Elaboration: 
+The oblique symbol (“/”), or “slash”, has so many possible meanings that it should be avoided.   
+The slash symbol (such as in “user/operator”, “budget/schedule” or the construct “and/or” 
+(discussed in R15) can lead to ambiguous statements that do not reflect accurately the true 
+stakeholder needs or lifecycle concepts from which the needs in the Integrated Set of Needs 
+were derived.   Also see R19. 
+ 
+Exceptions and relationships: 
+Exceptions to this rule include where the oblique symbol is used in units (for example “km/h”) or 
+when communicating a symmetrical range of a value (for example +/- 5 degrees F).  
+The oblique symbol may also be used when expressing ratios or fractions (such as 1/16)—see 
+R40. 
+ 
+Examples: 
+Unacceptable: The User_Management_System shall Open/Close the User_Account in less than 
+1 second.   
+[This is unacceptable because it is unclear as to what is meant by open/close: open, close, or 
+both?] 
+Improved: (Split into two requirements with an appropriate condition)  
+When <condition>, the User_Management_System shall Open the User_Account in less than 1 
+second. 
+When <condition>, the User_Management_System shall Close the User_Account in less than 1 
+second.  
+Unacceptable: When the Clutch is Disengaged and/or the Brake is Applied, the 
+Engine_Management_System shall disengage the Speed_Control_Subsystem within <XYZ ms>.   
+[This is unacceptable because of the use of “and/or.” If simultaneity is intended—that is the dual 
+conditions must be met at the same time—write the requirements as a logical AND. If “and” is 
+meant in the sense that the action is to be completed under each of the conditions, split the two 
+thoughts into separate requirements, one for each condition.  If “or” is meant, write the 
+requirement as a logical OR.] 
+Improved: (As one requirement if simultaneity is intended): 
+When [the Clutch is Disengaged] AND [the Brake is Applied], the Engine_Management_System 
+shall disengage the Speed_Control_Subsystem within <XYZ ms>. 
+Guide to Writing Requirements  85 
+ 
+ 
+INCOSE-TP-2010-006-04| VERS/REV:4  |  1 July 2023   
+Improved: (As two requirements if two separate conditions are intended): 
+When the Clutch is Disengaged, the Engine_Management_System shall disengage the 
+Speed_Control_Subsystem within <XYZ ms>. 
+When the Brake is Applied, the Engine_Management_System shall disengage the 
+Speed_Control_Subsystem within <XYZ ms>. 
+Improved: (As one requirement if inclusive OR is intended)  
+When EITHER [the Clutch is Disengaged] OR [the Brake is Applied], the 
+Engine_Management_System shall disengage the Speed_Control_Subsystem.

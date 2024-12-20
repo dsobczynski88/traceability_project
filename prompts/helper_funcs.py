@@ -1,4 +1,27 @@
 import pandas as pd
+import re
+
+def load_file(filepath):
+
+    with open(filepath,'r', encoding='utf-8',errors='ignore') as f:
+        return f.read()
+
+def write_string(s, filepath):
+
+    with open(filepath,'w', encoding='utf-8',errors='ignore') as f:
+        f.write(s)
+
+def add_line_breaks(s):
+    if '\n' not in s[-2:]:
+        return f'{s}\n'
+    else:
+        return s
+    
+def write_list(lst, filepath):
+    
+    with open(filepath,'w', encoding='utf-8',errors='ignore') as f:
+        lst = [add_line_breaks(s) for s in lst]
+        f.writelines(lst)
 
 def add_response(df, new_row):
     df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
@@ -31,6 +54,28 @@ def get_diff(list1,list2) -> list:
     s1 = set(list1)
     s2 = set(list2)
     return list(s1.difference(s2))
+
+def replace_tokens(_str:str,replace_tokens:list, replace_with:str) -> str:
+    """Replace the list of tokens with the replace_with string for a given string
+
+    Args:
+        _str (str): the corpus (str) on which to apply the replacement
+    Keyword Args:
+        replace_tokens (list): the list of tokens to be replaced
+        replace_with (str): the regex used to replace replace_tokens
+    """
+    for tok in replace_tokens:
+        _str = _str.replace(tok, replace_with)
+    return _str
+
+def remove_whitespace(_str:str) -> str:
+    """Replaces combinations of new line characters and tabs with a space
+
+    Args:
+        _str (str): the corpus (str) on which to apply the function
+    """  
+    _str = re.sub(r'[\n\t]+', ' ', _str)
+    return _str
 
 def recast_str(_str:str, na_value=[]):
     """This function takes in a str and default value for errors or NaNs. The built-in

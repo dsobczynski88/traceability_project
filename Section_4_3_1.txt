@@ -1,0 +1,69 @@
+R12 – CORRECT GRAMMAR 
+Definition: 
+Use correct grammar. 
+Elaboration: 
+We interpret language based on the rules of grammar.  Incorrect grammar leads to ambiguity and 
+clouds understanding.  This is especially true when the recipient of the need statement or 
+requirement statement is working in a second language relying on specific rules of grammar.  If 
+these rules are not followed, that person may misinterpret the meaning of the need statement or 
+requirement statement. 
+Incorrect use of grammar may make the true intent unclear resulting in an incorrect requirement 
+and thus make it difficult to verify the SOI meets the intent of the requirement. 
+Care must be taken when translating need statements and requirement statements from one 
+language to another and when sentence structure differs depending on the language in which the 
+Guide to Writing Requirements  79 
+ 
+ 
+INCOSE-TP-2010-006-04| VERS/REV:4  |  1 July 2023   
+original need or requirement statement was written.  Punctuation varies from language to 
+language and even between dialects of a given language.   
+Be cautious when need statements and requirement statements must be translated.  An 
+interesting exercise is to translate a requirement statement from one language to another and 
+translate the result back to the original language. 
+Many word processing applications are capable of applying a set of grammar rules based on a 
+set of built-in rules that are selectable.  When using an application specific set of grammar rules, 
+project-specific grammar items may be flagged as incorrect as they may not be applicable to the 
+project’s use of grammar. Therefore, the application grammar checking can be regarded as a 
+project-specific aspect. Many applications allow the user to “turn off” or “ignore” grammar rules 
+that do not apply to the project. 
+See also R4 - Define terms. 
+ 
+Examples: 
+Unacceptable: The Weapon_System shall storing the location of all ordnance.   
+[This is unacceptable because the grammatical error leads to uncertainty about the meaning.] 
+Improved: The Weapon_System shall store the location of all Ordnance.   
+[Note that “Ordnance” must be defined in the glossary to be explicit about the types of weapons 
+and ammunition. Also, where the location is to be stored and the format of the data, must be 
+addressed. The action “store” needs to be further evaluated to determine if that is an 
+appropriate action (verb) for the Weapon_System vs a user interacting with the 
+Weapon_System as discussed in R3.  Additionally, to be complete any specific performance 
+measures and conditions should be included within the requirement statement.] 
+ 
+Unacceptable: When in the Active_State, the Record_Subsystem shall display each of the 
+Names of the Line_Items, without obscuring the User_ID per <Display Standard xyz>. 
+[This is unacceptable because the grammatical error involving the inappropriate placement of 
+“each of”—it is most likely that a Line_Item has only one name.] 
+Improved: When in the Active_State, the Record_Subsystem shall display on <Display Device> 
+the Name of each Line_Item, without obscuring the User_ID per <Display Standard XYZ.>.  
+[This is acceptable the ambiguity has been addressed.  The requirement is now more complete 
+in that it references where the information is to be display and the standard to be used 
+concerning the display of the information. If there are any performance measures that apply, 
+they would also need to be addressed.] 
+ 
+Unacceptable: The <corporate website> shall only use Approved_Fonts. 
+[This is unacceptable because it mandates that the website shall only use the designated 
+fonts—that is, it is not expected to perform any other function except to use those fonts. This is 
+clearly not what is meant but becomes ambiguous by the inappropriate grammar and the 
+incorrect placement of the word “only”. What is most likely meant is that the only fonts to be 
+used are the approved fonts defined in the organization’s display standard.] 
+Improved: The <corporate website> shall display information using Approved_Fonts defined in 
+<Display Standard xyz>. 
+Guide to Writing Requirements  80 
+ 
+ 
+INCOSE-TP-2010-006-04| VERS/REV:4  |  1 July 2023   
+[This is better because the ambiguity has been addressed.  To be acceptable, any conditions 
+and qualifying clauses would also need to be added.  If the organization has a standard for 
+displaying information that addresses acceptable fonts, font sizes, colors, spacing, human 
+factors, etc., the requirement should refer to that standard.] 
+ 

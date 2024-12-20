@@ -1,0 +1,85 @@
+2.4 C3 - Unambiguous 
+Definition: 
+Need statements and requirement statements must be stated such that their intent is clear and 
+can be interpreted in only one way by all the intended audiences. 
+ 
+Rationale: 
+A need statement and a requirement statement must lend itself to a single interpretation of intent.   
+These statements are effectively an agreement between two parties communicating intent from 
+one to the other and forming the basis of verification and validation that the intent was met. An 
+agreement is difficult to enact unless both parties are clear on the exact obligation.   
+As shown in Figure 11, the intent of a need or requirement must be understood, in the same way, 
+by all intended audiences across the lifecycle.  
+  
+Figure 11: Needs and Requirements Understood in the Same Way 
+Ambiguity leads to interpretations of a need or requirement not intended by the author leading to 
+problems such schedule slips, budget overruns, or a failure of the SOI to pass system validation 
+and not be accepted for its intended use; which could result in litigation and financial loss. 
+An ambiguous need or requirement is neither Correct (C8) nor Verifiable/Validatable (C7).   
+ 
+Guidance: 
+When writing a need or requirement statement, ask whether it could be interpreted more than one 
+way.  It is common for people to interpret words based on their own set of filters, biases, and 
+assumptions.  For example, if a person states: “I need a cream for wrinkles.” - what was the 
+intended meaning of the word “for” – to “give”, “remove”, or “prevent”?   If someone goes to a 
+barber and states: “I need my hair shorter – I want it over my ears.” – what was the intended 
+meaning of the word “over” - “cover” or “above”? 
+Often, people will use common words by themselves without using a modifier that helps the 
+receiver understand the context, and thus the intended meaning of the word used. It is a bad 
+practice to assume that the meaning of the words used are understood the same way by all 
+intended audiences. 
+(Note: Refer to the NRM, Section 2.10, on a more detailed discussion on effective 
+communications.) 
+Customers
+ Users
+ Providers Verifiers/
+ Validators
+ Original figure created by L. Wheatcraft. Usage granted per the INCOSE Copyright Restrictions. All other rights reserved.
+Guide to Writing Requirements  42 
+ 
+ 
+INCOSE-TP-2010-006-04| VERS/REV:4  |  1 July 2023   
+For needs, ask whether the need is Validatable (C7), that is, whether it is stated in such a way 
+that sufficient evidence can be obtained that the need has been met based on the wording of the 
+need statement without having to interpret the stakeholder intent or make assumptions of that 
+intent.  
+For a requirement ask whether the requirement is Verifiable/Validatable (C7), that is, whether it is 
+stated in such a way that sufficient evidence can be obtained that the requirement has been met 
+based on the wording of the requirement without having to interpret the intended meaning or 
+make assumptions as to the intended meaning.  
+It is useful for the stakeholders who are involved in the implementation of the needs and resulting 
+requirements or system verification and system validation to be involved in the definition, review, 
+and baseline of the needs and resulting requirements.  When they see needs or requirements 
+that are ambiguous and the stakeholder’s intent is not clearly communicated, they can identify the 
+issue and suggest an alternate, unambiguous wording of the need or requirement statement.   
+As a minimum, it is recommended that the need or requirement owner(s) along with the 
+development team and those involved in system verification and system validation do a 
+walkthrough of the need set or requirement set to ensure that needs and requirements are 
+understood as intended, individually and as a set.  As discussed in Section 1.9, this activity is 
+referred to as needs validation or requirement validation. 
+Because a need expression or requirement expression includes both the statement and a set of 
+attributes, attributes can be used to help address any ambiguities that may still exist even in the 
+most carefully worded need statement or requirement statement.   
+Due to the limitations of language, it may prove difficult to completely remove all ambiguity.  In 
+this case, the use of the Attribute, A1- Rationale, can be used to include contextual information to 
+better understand the reason and source of the requirement and may provide additional insight of 
+the intent, helping to reduce ambiguity and provide some increased ability to apply the 
+“reasonable person” test.  Supporting information or commentary on how and why the 
+requirement was formed can be included in the rationale.  By including rationale in each need and 
+requirement expression, readers do not have to assume this information—it is clearly stated for 
+all to see and understand in the same way. 
+In addition, Attribute, A39 - Additional Comments, may be used to add additional information 
+beyond what was included in the rationale.  Additional comments can be used to document 
+possible issues with the need or design input requirement, any conflicts, status of negotiations, 
+actions, design notes, implementation notes, etc.  Further, evaluation and prototyping of the 
+system concept may have identified important guidelines for the implementation of the need or 
+requirement.  This information may be useful as the need or requirement is being reviewed and 
+serves as a place to document information not addressed by other attributes. 
+Note that the information contained within the attributes is meant to be informative in a 
+contractual sense (not normative), because of this, the word 'shall' must not be used in any of the 
+text contained in attributes to help ensure the amplifying information is not inadvertently 
+interpreted to be an additional requirement. 
+When text only makes it difficult to communicate the intent of complex requirement, the inclusion 
+of a diagram or trace to a model may help remove the ambiguity.  See R23. 
+Ambiguity of individual need and requirement statements can be assessed during early system 
+verification and design verification activities discussed in the NRM and GtVV.

@@ -1,0 +1,47 @@
+R16 – USE OF “NOT” 
+Definition: 
+Avoid the use of the word “not”. 
+Elaboration: 
+The presence of the word “not” in a need statement or requirement statement implies “not ever”, 
+which is impossible to verify in a finite time, in which case, the need statement or requirement 
+statement is not correct (C8). 
+In theory, there is a large number of actions the system should not do.  Such statements should be 
+re-written in the positive—that is, referring to what the entity is to do, rather than what it is not to do. 
+Rewriting the need statement or requirement statement to avoid the use of “not” results in a need or 
+statement requirement statement that is clearer and is verifiable/validatable (C7). 
+ 
+Examples: 
+Unacceptable: The <SOI> shall not fail.   
+[This is unacceptable because verification of the requirement would require infinite time. The 
+requirement is also infeasible in that, as written, the implication is to never fail, under any 
+conditions.] 
+Improved:  
+The <SOI> shall have an Availability of greater than or equal to 95%.  or  
+The <SOI> shall have a Mean Time Between Failures (MTBF) of xx operating hours. 
+[For quality requirements, it would be more precise in the above were written as need 
+statements.  Then those transforming the quality need statements into requirement statements 
+would define feasible concepts that would result in the needed quality attributes and derive well
+formed requirements on the <SOI> that would result in those needs to be met.] 
+Unacceptable: The <SOI> shall not contain mercury.   
+[This is unacceptable because verification of the requirement would require the ability to 
+measure the amount of mercury with infinite accuracy and precision.  In addition, the real 
+requirement may not be stated, for example, the real concern may be the use of toxic materials, 
+not just mercury.  If that is the case, it may be best to reference a standard from a governmental 
+agency concerning allowable exposures to a list of common toxic materials.] 
+Improved: The <SOI> shall limit metallic mercury exposure to those coming in contact with the 
+<SOI> to less than or equal 0.025 mg/m3 over a period of 8 hours. 
+ 
+Exceptions and relationships: 
+It may be reasonable to include “not” in a requirement when the logical “NOT” is implied—for 
+example when using not [X or Y].  In that case, however, in accordance with R15, it may be better 
+to capitalize the “NOT” to make the logical condition explicit: NOT [X or Y].   
+Guide to Writing Requirements  84 
+ 
+ 
+INCOSE-TP-2010-006-04| VERS/REV:4  |  1 July 2023   
+There may be other cases such as “The <SOI> shall not be red in color.”, which is stating a 
+constraint and is verifiable, as long as the range of shades of red is stated (RBG rr,bb,gg range or 
+a “name” of red in some standard).   
+The key consideration is verification.  If the “not” can be unambiguously verified, then its use is 
+acceptable. 
+ 

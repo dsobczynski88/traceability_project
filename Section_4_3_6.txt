@@ -1,0 +1,48 @@
+R17 – USE OF OBLIQUE SYMBOL 
+Definition: 
+Avoid the use of the oblique (“/”) symbol. 
+Elaboration: 
+The oblique symbol (“/”), or “slash”, has so many possible meanings that it should be avoided.   
+The slash symbol (such as in “user/operator”, “budget/schedule” or the construct “and/or” 
+(discussed in R15) can lead to ambiguous statements that do not reflect accurately the true 
+stakeholder needs or lifecycle concepts from which the needs in the Integrated Set of Needs 
+were derived.   Also see R19. 
+ 
+Exceptions and relationships: 
+Exceptions to this rule include where the oblique symbol is used in units (for example “km/h”) or 
+when communicating a symmetrical range of a value (for example +/- 5 degrees F).  
+The oblique symbol may also be used when expressing ratios or fractions (such as 1/16)—see 
+R40. 
+ 
+Examples: 
+Unacceptable: The User_Management_System shall Open/Close the User_Account in less than 
+1 second.   
+[This is unacceptable because it is unclear as to what is meant by open/close: open, close, or 
+both?] 
+Improved: (Split into two requirements with an appropriate condition)  
+When <condition>, the User_Management_System shall Open the User_Account in less than 1 
+second. 
+When <condition>, the User_Management_System shall Close the User_Account in less than 1 
+second.  
+Unacceptable: When the Clutch is Disengaged and/or the Brake is Applied, the 
+Engine_Management_System shall disengage the Speed_Control_Subsystem within <XYZ ms>.   
+[This is unacceptable because of the use of “and/or.” If simultaneity is intended—that is the dual 
+conditions must be met at the same time—write the requirements as a logical AND. If “and” is 
+meant in the sense that the action is to be completed under each of the conditions, split the two 
+thoughts into separate requirements, one for each condition.  If “or” is meant, write the 
+requirement as a logical OR.] 
+Improved: (As one requirement if simultaneity is intended): 
+When [the Clutch is Disengaged] AND [the Brake is Applied], the Engine_Management_System 
+shall disengage the Speed_Control_Subsystem within <XYZ ms>. 
+Guide to Writing Requirements  85 
+ 
+ 
+INCOSE-TP-2010-006-04| VERS/REV:4  |  1 July 2023   
+Improved: (As two requirements if two separate conditions are intended): 
+When the Clutch is Disengaged, the Engine_Management_System shall disengage the 
+Speed_Control_Subsystem within <XYZ ms>. 
+When the Brake is Applied, the Engine_Management_System shall disengage the 
+Speed_Control_Subsystem within <XYZ ms>. 
+Improved: (As one requirement if inclusive OR is intended)  
+When EITHER [the Clutch is Disengaged] OR [the Brake is Applied], the 
+Engine_Management_System shall disengage the Speed_Control_Subsystem.

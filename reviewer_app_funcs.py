@@ -17,8 +17,14 @@ def send_prompt(client, prompt: str) -> dict:
 def get_ai_response(response) -> str:
     return response.choices[0].message.content
 
-def get_requirements_review(client, requirements: str) -> str:
+def get_requirements_review(client, requirements: str) -> list:
     prompts = promptlib.review_requirements(requirements)
+    resp_list=[]
+    for prompt in prompts:
+        resp_list.append(get_ai_response(send_prompt(client, prompt)))
+    return resp_list
+
+def get_responses(client, prompts: list) -> list:
     resp_list=[]
     for prompt in prompts:
         resp_list.append(get_ai_response(send_prompt(client, prompt)))

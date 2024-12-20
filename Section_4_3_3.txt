@@ -1,0 +1,36 @@
+R14 – CORRECT PUNCTUATION 
+Definition: 
+Use correct punctuation. 
+Elaboration: 
+Incorrect punctuation can cause confusion between sub-clauses in a need or requirement 
+statement.  
+A need or requirement statement with incorrect punctuation is not Correct (C8) 
+Note also that the more punctuation in a need or requirement statement, the greater the 
+opportunity for ambiguity. 
+Many word processing applications are capable of applying a set of punctuation rules as text is 
+entered based on a set of built-in rules that are selectable.  When using an application specific 
+set of punctuation rules, project-specific punctuation items may be flagged as incorrect as they 
+may not be applicable to the project’s use of punctuation. Therefore, the application punctuation 
+checking can be regarded as a project-specific aspect. Many applications allow the user to “turn 
+off” or “ignore” punctuation rules that do not apply to the project. 
+ 
+Examples: 
+Unacceptable: The Navigation_Beacon shall provide Augmentation_Data having the 
+characteristics defined in <ICD xyz> to each Maritime_User, engaged in 
+Harbor_Harbor_Approach_Maneuvering (HHA) at an accuracy of less than 20 meters.   
+[This is unacceptable because the incorrectly placed comma in this sentence confuses the 
+meaning, leading the reader to believe that the accuracy is related to the maneuver rather than 
+to the augmentation data.]  
+Improved: The Navigation_Beacon shall provide Navigation_Data having the characteristics 
+defined in <ICD xyz> to each Maritime_User engaged in Harbor_Harbor_Approach_Maneuvering 
+(HHA), at an accuracy of less than 20 meters. 
+[The positioning of the comma now makes it clear that the accuracy and availability relate to the 
+data. Also note that, while performance measures are included, the appropriate conditions are 
+not addressed.  Further “Navigation_Beacon”, “Navigation_Data”, “Maritime_User”, and 
+“Harbor_Harbor_Approach_Maneuvering (HHA)” must be defined in the glossary or data 
+dictionary.]  
+ 
+Guide to Writing Requirements  82 
+ 
+ 
+INCOSE-TP-2010-006-04| VERS/REV:4  |  1 July 2023   
