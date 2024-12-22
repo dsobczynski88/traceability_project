@@ -14,7 +14,7 @@ language to another and when sentence structure differs depending on the languag
 Guide to Writing Requirements  79 
  
  
-INCOSE-TP-2010-006-04| VERS/REV:4  |  1 July 2023   
+INCOSE-TP-2010-006-04| VERS/REV:4  |  1 July 2023  
 original need or requirement statement was written.  Punctuation varies from language to 
 language and even between dialects of a given language.   
 Be cautious when need statements and requirement statements must be translated.  An 

@@ -23,17 +23,18 @@ def create_file(section, text, outdir):
         # Write the string to the file
         f.write(text)
     
-with open('ambiguity_context_incose_gtwr_24.txt','r', encoding='utf-8') as f:
+# Define output directory as the working directory
+WD = Path.cwd()
+DATA_DIR = WD / 'data'
+
+with open(f"{str(DATA_DIR)}/ambiguity_context_incose_gtwr_24.txt",'r', encoding='utf-8') as f:
     sec_24 = f.read()
 
-with open('ambiguity_context_incose_gtwr_43.txt','r', encoding='utf-8') as f:
+with open(f"{str(DATA_DIR)}/ambiguity_context_incose_gtwr_43.txt",'r', encoding='utf-8') as f:
     sec_43 = f.read()
 
-# Define output directory as the working directory
-wd = str(Path.cwd())
-
 # Output Section 2.4 of the INCOSE guide to writing requirements
-create_file(section='2_4', text=sec_24)
+create_file(section='2_4', text=sec_24, outdir=str(DATA_DIR))
 
 # Preprocess Sections 4.3.1 - 4.3.6
 FLAGS_43 = re.DOTALL
@@ -41,4 +42,4 @@ sec_pat = r'(4\.3\.[1-6])\s+(.*?)((?=4\.3\.[1-6])|(?=$))'
 sec_txt = get_parsed_text(sec_pat, sec_43, FLAGS_43)
 for sec in sec_txt:
     # Output sections the INCOSE guide to writing requirements
-    create_file(section=sec[0].replace('.','_'), text=sec[1], outdir=wd)
+    create_file(section=sec[0].replace('.','_'), text=sec[1], outdir=DATA_DIR)

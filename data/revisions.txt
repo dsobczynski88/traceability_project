@@ -1,0 +1,24 @@
+```python
+[
+    [
+        'Program Administrators and Nursing Staff Members shall be able to specify the preferred sequence of classes for a given cohort.', 
+        'Program Administrators and Nursing Staff Members shall be able to specify the preferred sequence of classes for a given cohort, where the "preferred sequence" is defined as a prioritized list of classes established based on predefined criteria such as availability, prerequisites, and user input.'
+    ],
+    [
+        'The product shall allow a user to identify himself or herself as a player.', 
+        'The product shall allow a user to enter a username or email to identify as a player.'
+    ],
+    [
+        'The Disputes System shall provide view access capability for authorized users of the application.', 
+        'The Disputes System shall provide view access capability for authorized users of the application, where "view access" is defined as the ability to view specific content types such as documents and records, as determined by user permissions.'
+    ],
+    [
+        'The ratings shall include categories for attempted use of recycled parts and actual use of recycled parts.', 
+        'The ratings shall include categories for "attempted use of recycled parts" and "actual use of recycled parts," with specific criteria defined to distinguish between "attempted" and "actual use," such as documented evidence or metrics of recycling.'
+    ],
+    [
+        'Website shall allow customers to purchase pre-paid cards of $5 $10 or $20 value either by credit card or mail-in payment option.', 
+        'The website shall allow customers to purchase pre-paid cards of $5, $10, or $20 values using either a credit card or a mail-in payment option, with the possibility of selecting one of the payment methods for the transaction.'
+    ]
+]
+```

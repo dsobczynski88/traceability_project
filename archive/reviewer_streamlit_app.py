@@ -1,5 +1,5 @@
 import streamlit as st
-from reviewer_app_funcs import get_requirements_review
+from helper import get_requirements_review
 from prompts.helper_funcs import concat_list_of_str, dict_list_to_df
 from prompts.promptlib import requirement_attributes, requirement_review_delimiter
 from dotenv import dotenv_values
