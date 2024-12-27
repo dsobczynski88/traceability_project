@@ -4,25 +4,25 @@ from dotenv import dotenv_values
 from functools import reduce
 from prompts.promptlib import single_attribute_review, revise
 from helper import *
-
+from tqdm import tqdm
 
 # Define input data (requirements) filename with extension
 WD = Path.cwd()
 DATA_DIR = WD / 'data'
 
-input_data = DATA_DIR / 'software_requirements_extended.csv'
+input_data = DATA_DIR / 'requirements.csv'
 
 # Load input data (csv file)
 data = pd.read_csv(input_data)
 
-# Filter functional requirements only and get a sample of 30 functional requirements
-mask = data['Type'].isin(['F','FR']) & data['Requirement'].str.contains('shall')
-data = list(data[mask].sample(5)['Requirement'].values)
-
-print(data)
+try:
+    data = list(data['Requirement'].values)
+except KeyError:
+    print('The input requirements.csv file must contain a column titled Requirement')
+    quit()
 
 # Load preprocessed text files
-files = list(DATA_DIR.rglob('Section_2_4.txt'))
+files = list(DATA_DIR.rglob('Section_*.txt'))
 names = [x.name for x in files]
 
 # Build prompt list using the preprocessed text files
@@ -37,6 +37,10 @@ secret_key = config['OPENAI_API_KEY']
 client = OpenAI(api_key=secret_key) 
 responses = get_responses(client, prompts=prompt_list)
 
+# Load responses
+#response_files = list(DATA_DIR.rglob('response_*.txt'))
+#responses = [load_file(f) for f in response_files]
+
 # Output each response to a text file
 outdir=str(Path.cwd())
 for i in range(len(responses)):
@@ -45,18 +49,21 @@ for i in range(len(responses)):
 # Post process the AI responses and cast each response to a dataframe
 replacements = ['\n','\t','    ', '```python', '```'] 
 df_list = []
-for i in range(len(responses)):
+print('Generating responses to prompts using OpenAI API...')
+for i in tqdm(range(len(responses))):
     responses[i] = eval(replace_tokens(responses[i], replace_tokens=replacements, replace_with=''))
-    temp_df = pd.DataFrame(responses[i], columns=['requirements']+names)
-    temp_df['reviews'] = temp_df.iloc[:,1:].agg(' '.join, axis=1) 
+    temp_df = pd.DataFrame(responses[i], columns=['requirements']+[names[i]]) 
     df_list.append(temp_df)
 review_df = reduce(lambda l,r: pd.merge(l,r, on='requirements',how='inner'), df_list)
+
+review_df['reviews'] = review_df.iloc[:,1:].agg(' '.join, axis=1)
 write_output(review_df,f"{str(DATA_DIR)}/output_df.xlsx")
 
 # Run the revision prompt which proposes a requirement revision based on AI-generated review
 # using the output from above
 requirements = list(review_df['requirements'].values)
 reviews = list(review_df['reviews'].values)
+print('Generating requirement revisions based on ambiguity checker reviews...')
 revisions = get_responses(client, prompts=[revise(requirements, reviews)])
 
 # Since a single prompt is being run, the output list has only 1 element
