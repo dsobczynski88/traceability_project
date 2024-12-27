@@ -1,24 +1,20 @@
 ```python
 [
     [
-        'Program Administrators and Nursing Staff Members shall be able to specify the preferred sequence of classes for a given cohort.', 
-        'Program Administrators and Nursing Staff Members shall be able to specify the preferred sequence of classes for a given cohort, where the "preferred sequence" is defined as a prioritized list of classes established based on predefined criteria such as availability, prerequisites, and user input.'
-    ],
-    [
-        'The product shall allow a user to identify himself or herself as a player.', 
-        'The product shall allow a user to enter a username or email to identify as a player.'
-    ],
-    [
         'The Disputes System shall provide view access capability for authorized users of the application.', 
-        'The Disputes System shall provide view access capability for authorized users of the application, where "view access" is defined as the ability to view specific content types such as documents and records, as determined by user permissions.'
+        'The Disputes System shall provide view access capability for authorized users of the application, specifying the types of data or sections of the application that can be viewed and defining "authorized users" for clarity.'
     ],
     [
-        'The ratings shall include categories for attempted use of recycled parts and actual use of recycled parts.', 
-        'The ratings shall include categories for "attempted use of recycled parts" and "actual use of recycled parts," with specific criteria defined to distinguish between "attempted" and "actual use," such as documented evidence or metrics of recycling.'
+        'The Disputes System shall provide update access capability for authorized users of the application.', 
+        'The Disputes System shall provide update access capability for authorized users of the application, clearly defining the types of updates permitted, such as updates to user profiles and dispute details, and detailing the authentication criteria for "authorized users."'
     ],
     [
-        'Website shall allow customers to purchase pre-paid cards of $5 $10 or $20 value either by credit card or mail-in payment option.', 
-        'The website shall allow customers to purchase pre-paid cards of $5, $10, or $20 values using either a credit card or a mail-in payment option, with the possibility of selecting one of the payment methods for the transaction.'
+        'The Disputes System must allow the users to select disputable transactions (based on the age of the transaction) from a user interface and initiate a dispute (ticket retrieval request or chargeback notification) on the selected transaction.', 
+        'The Disputes System must allow users to select disputable transactions based on defined criteria, including the age of the transaction, and must detail the steps for initiating a dispute, which may involve a ticket retrieval request or a chargeback notification, ensuring these actions are distinct and clearly defined.'
+    ],
+    [
+        'The Disputes System must provide the user the ability to initiate a single dispute case on multiple transactions that belong to a single merchant.', 
+        'The Disputes System must provide the ability for the user to initiate a dispute case that encompasses multiple transactions associated with a specific merchant, clearly defining what constitutes a "single merchant" and what is meant by a "dispute case," including any limits on the number of transactions.'
     ]
 ]
 ```

@@ -5,9 +5,28 @@
 My inspiration for this project began during a career change into software quality. My goal is to look for ways to improve software development documentation with the broader goal to improve product quality. I hope that others find this work to be useful in their personal or professional experience. 
 
 ### Project Description
-This project applies NLP and data science tools with the goal to improve software quality artifact reviews -- specifically regarding traceability. This project intends to perform the following functions:
+This project applies NLP and data science tools with the goal to improve software quality artifact reviews -- specifically regarding traceability. This project currently contains the following feature:
 
-- Leverage prompt engineering techniques $^1$ via OpenAI's API to refine requirements writing. Specifically, the goal is to provide suggestions for improvement on how a given requirement is written. The prompts reference system engineering best practices such as those described by INCOSE's Guide to Writing Requirements $^2$.
+- *Requirements Ambiguity Checker*
+    - This feature leverages basic prompt engineering techniques $^1$ via OpenAI's API to refine requirements writing. Specifically, the goal is to improve the quality of written requirement statements. The prompts are built using the INCOSE Guide to Writing requirements $^2$ which reflects system engineering best practices.
+
+### Getting started
+
+1) To use the ambiguity checker, clone the repository, create a .env file as follows:
+
+    `OPENAI_API_KEY = 'Your api key'`
+
+2) Upload a csv file to the data folder titled 'requirements'. See the sample file provided in the data folder.
+
+3) Open a new command prompt and navigate to the top-level directory where main.py is contained.
+
+4) Install dependencies:
+
+    `py -m pip install -r requirements.txt`
+
+5) Run the program:
+
+    `py -m main`
 
 ### Technologies used
 This project is written in Python. The choice of Python is based on its broad-range support from the data science and AI community.

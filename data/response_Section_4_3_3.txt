@@ -1,0 +1,18 @@
+```python
+[
+    ['The Disputes System shall provide view access capability for authorized users of the application.', 
+     'The requirement is punctuated correctly, providing clarity. However, the phrase "view access capability" could be more specific by defining what "view access" entails. A glossary reference for "authorized users" should also be included to ensure clarity.'],
+     
+    ['The Disputes System shall provide update access capability for authorized users of the application.', 
+     'Similar to Requirement A, the punctuation is correct. The phrase "update access capability" lacks specificity and could benefit from clear definitions. A glossary reference for "authorized users" should also be included.'],
+     
+    ['The Disputes System must allow the users to select disputable transactions (based on the age of the transaction) from a user interface and initiate a dispute (ticket retrieval request or chargeback notification) on the selected transaction.', 
+     'This requirement contains multiple clauses that could benefit from improved punctuation for clarity. The use of parentheses is appropriate, but separating clauses with punctuation could help prevent confusion. Consider revising for clearer structure. Also, a definition for "disputable transactions" should be included.'],
+     
+    ['The Disputes System must provide the user the ability to initiate a single dispute case on multiple transactions that belong to a single merchant.', 
+     'While the punctuation is generally correct, the phrase "the user the ability to initiate" could be more clearly stated as "the ability for the user to initiate." Additionally, consideration should be given to defining "dispute case" and "single merchant" to avoid ambiguity.'],
+     
+    ['The Disputes System will provide the user the ability to create or initiate a ticket retrieval request. As part of ticket retrieval creation process the system must prompt the user to enter all the required information to create the ticket retrieval request. The ticket retrieval request is a document that is sent to merchant inquiring the validity of a transaction.', 
+     'This requirement is overly complex and lacks appropriate punctuation, leading to ambiguity. It would be clearer if broken into multiple sentences or bullet points. Furthermore, "ticket retrieval creation process" should be rephrased for clarity, and definitions for "ticket retrieval request" and "merchant" should be added in a glossary.']
+]
+```
