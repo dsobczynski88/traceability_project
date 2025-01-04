@@ -2,19 +2,19 @@
 [
     [
         'The Disputes System shall provide view access capability for authorized users of the application.', 
-        'The Disputes System shall provide view access capability for authorized users of the application, specifying the types of data or sections of the application that can be viewed and defining "authorized users" for clarity.'
+        'The Disputes System shall provide read-only access to specific data elements for authorized users who meet [specific criteria].'
     ],
     [
         'The Disputes System shall provide update access capability for authorized users of the application.', 
-        'The Disputes System shall provide update access capability for authorized users of the application, clearly defining the types of updates permitted, such as updates to user profiles and dispute details, and detailing the authentication criteria for "authorized users."'
+        'The Disputes System shall provide the ability for authorized users who fulfill [specific conditions] to update transaction status or modify user information.'
     ],
     [
         'The Disputes System must allow the users to select disputable transactions (based on the age of the transaction) from a user interface and initiate a dispute (ticket retrieval request or chargeback notification) on the selected transaction.', 
-        'The Disputes System must allow users to select disputable transactions based on defined criteria, including the age of the transaction, and must detail the steps for initiating a dispute, which may involve a ticket retrieval request or a chargeback notification, ensuring these actions are distinct and clearly defined.'
+        'The Disputes System must allow users to select disputable transactions based on [age criteria] from a user interface. Additionally, the system must allow users to initiate a dispute as either a ticket retrieval request or a chargeback notification for the selected transactions.'
     ],
     [
         'The Disputes System must provide the user the ability to initiate a single dispute case on multiple transactions that belong to a single merchant.', 
-        'The Disputes System must provide the ability for the user to initiate a dispute case that encompasses multiple transactions associated with a specific merchant, clearly defining what constitutes a "single merchant" and what is meant by a "dispute case," including any limits on the number of transactions.'
+        'The Disputes System must allow an authorized user to initiate a single dispute case involving multiple transactions that are grouped under a single merchant, provided the transactions meet certain criteria.'
     ]
 ]
 ```

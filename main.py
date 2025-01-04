@@ -34,12 +34,13 @@ for f in files:
 # Call OpenAI API using prompts defined in the prompt_list 
 config = dotenv_values(".env")
 secret_key = config['OPENAI_API_KEY']
-client = OpenAI(api_key=secret_key) 
-responses = get_responses(client, prompts=prompt_list)
+client = OpenAI(api_key=secret_key)
+print('Running Ambiguity check for provided input...calling OpenAI API...') 
+#responses = get_responses(client, prompts=prompt_list)
 
 # Load responses
-#response_files = list(DATA_DIR.rglob('response_*.txt'))
-#responses = [load_file(f) for f in response_files]
+response_files = list(DATA_DIR.rglob('response_*.txt'))
+responses = [load_file(f) for f in response_files]
 
 # Output each response to a text file
 outdir=str(Path.cwd())
@@ -50,7 +51,7 @@ for i in range(len(responses)):
 replacements = ['\n','\t','    ', '```python', '```'] 
 df_list = []
 print('Generating responses to prompts using OpenAI API...')
-for i in tqdm(range(len(responses))):
+for i in range(len(responses)):
     responses[i] = eval(replace_tokens(responses[i], replace_tokens=replacements, replace_with=''))
     temp_df = pd.DataFrame(responses[i], columns=['requirements']+[names[i]]) 
     df_list.append(temp_df)
@@ -82,4 +83,12 @@ write_output(revision_df,f"{str(DATA_DIR)}/revisions_df.xlsx")
 
 # Combine revision_df with review_df
 comb_df = pd.merge(left=review_df,right=revision_df, on='requirements',how='inner')
-write_output(comb_df,f"{str(DATA_DIR)}/combined_output.xlsx")
+comb_df['requirements_tok'] = comb_df['requirements'].apply(lambda s: s.split())
+comb_df['revision_tok'] = comb_df['revision'].apply(lambda s: s.split())
+comb_df['revision_tokens'] = comb_df[['revision_tok','requirements_tok']].apply(lambda l: get_diff(*l), axis=1)
+
+write_output(comb_df,f"{str(DATA_DIR)}/combined_output.xlsx", filetype='excel')
+write_output(comb_df,f"{str(DATA_DIR)}/combined_output.csv", filetype='csv')
+
+# Convert review_df to HTML
+# Initialize Airium and construct the HTML document

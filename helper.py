@@ -4,6 +4,7 @@ from prompts import promptlib
 from functools import partial, reduce
 import re
 import itertools
+from tqdm import tqdm
 
 def send_prompt(client, prompt: str) -> dict:
     return client.chat.completions.create(
@@ -26,7 +27,7 @@ def get_requirements_review(client, requirements: str) -> list:
 
 def get_responses(client, prompts: list) -> list:
     resp_list=[]
-    for prompt in prompts:
+    for prompt in tqdm(prompts):
         resp_list.append(get_ai_response(send_prompt(client, prompt)))
     return resp_list
 
@@ -59,10 +60,13 @@ def add_response(df, new_row):
     df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
     return df
 
-def write_output(df,filename):
+def write_output(df,filename, filetype='excel'):
     if 'Unnamed: 0' in df.columns:
         df.drop(columns='Unnamed: 0',inplace=True)
-    df.to_excel(filename)
+    if filetype == 'excel':
+        df.to_excel(filename)
+    if filetype == 'csv':
+        df.to_csv(filename)
 
 def load_input(filename):
     return pd.read_excel(filename)
