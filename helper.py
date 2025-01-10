@@ -18,12 +18,12 @@ def send_prompt(client, prompt: str) -> dict:
 def get_ai_response(response) -> str:
     return response.choices[0].message.content
 
-def get_requirements_review(client, requirements: str) -> list:
-    prompts = promptlib.review_requirements(requirements)
-    resp_list=[]
-    for prompt in prompts:
-        resp_list.append(get_ai_response(send_prompt(client, prompt)))
-    return resp_list
+#def get_requirements_review(client, requirements: str) -> list:
+#    prompts = promptlib.review_requirements(requirements)
+#    resp_list=[]
+#    for prompt in prompts:
+#        resp_list.append(get_ai_response(send_prompt(client, prompt)))
+#    return resp_list
 
 def get_responses(client, prompts: list) -> list:
     resp_list=[]
@@ -34,7 +34,7 @@ def get_responses(client, prompts: list) -> list:
 def get_review_summary(client) -> str:
     pass
 
-def load_file(filepath):
+def load_single_file(filepath):
 
     with open(filepath,'r', encoding='utf-8',errors='ignore') as f:
         return f.read()
@@ -60,17 +60,21 @@ def add_response(df, new_row):
     df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
     return df
 
-def write_output(df,filename, filetype='excel'):
+def write_frame(df,filepath, filetype='excel'):
     if 'Unnamed: 0' in df.columns:
         df.drop(columns='Unnamed: 0',inplace=True)
     if filetype == 'excel':
-        df.to_excel(filename)
+        df.to_excel(filepath)
     if filetype == 'csv':
-        df.to_csv(filename)
+        df.to_csv(filepath)
 
 def load_input(filename):
     return pd.read_excel(filename)
-    
+
+def load_requirements(filepath):
+    data = pd.read_csv(filepath)
+    return list(data['Requirement'].values)
+
 def get_type_name(var) -> str:
     """Get the string representation of the type of an input variable var
 
