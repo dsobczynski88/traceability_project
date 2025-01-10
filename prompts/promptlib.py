@@ -26,6 +26,30 @@ def single_attribute_review(requirements, context):
     {context}
     """
 
+def naive_ambiguity_review(requirements):
+
+    return f"""
+    Instructions
+    ---
+    Step 1 - The user will hand over a python list of Requirements.
+    Step 2 - The user requests that each requirement be reviewed for ambiguity
+    Step 3 - Analyze the requirement of the python list provided in Step 1 per the request in Step 2. Specifically, the analysis should review the Requirement for areas of ambiguity and look for opportunities for improvement.
+    
+    Rules
+    ---
+    Return a python list of lists which contains the results of Step 3 for each requirement. Specifically, each list element of the must be a list containing the results from the Step 3 analysis as described in Response Format.
+    
+    Response Format:
+    [
+        [Requirement A, Review of Requirement A],
+        [Requirement B, Review of Requirement B],
+        [Requirement C, Review of Requirement C],
+        [...]
+    ]
+
+    Requirements: 
+    {requirements}
+    """
 
 def summarize(review):
 
