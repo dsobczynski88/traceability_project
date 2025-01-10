@@ -6,6 +6,14 @@ from prompts.promptlib import single_attribute_review, revise
 from helper import *
 from tqdm import tqdm
 
+
+#WD = Path.cwd()
+#DATA_DIR = WD / 'data'
+#input_data = DATA_DIR / 'requirements.csv'
+#reviewer = RequirementAttributeReviewer(input_data, list(DATA_DIR.rglob('Section_2*.txt')), DATA_DIR, single_attribute_review)
+#reviewer.run()
+
+
 # Define input data (requirements) filename with extension
 WD = Path.cwd()
 DATA_DIR = WD / 'data'
@@ -36,7 +44,7 @@ config = dotenv_values(".env")
 secret_key = config['OPENAI_API_KEY']
 client = OpenAI(api_key=secret_key)
 print('Running Ambiguity check for provided input...calling OpenAI API...') 
-#responses = get_responses(client, prompts=prompt_list)
+responses = get_responses(client, prompts=prompt_list)
 
 # Load responses
 response_files = list(DATA_DIR.rglob('response_*.txt'))
