@@ -1,4 +1,7 @@
 def single_attribute_review(requirements, context):
+    """
+    This prompt template takes in a list of requirements and an INOCSE description of a particular requirement attribute.
+    """
 
     return f"""
     Instructions

@@ -5,8 +5,14 @@ from functools import partial, reduce
 import re
 import itertools
 from tqdm import tqdm
+import pylcs
 
-def send_prompt(client, prompt: str) -> dict:
+def find_LCS(s1, s2):
+    """https://stackoverflow.com/questions/66162740/how-to-find-the-longest-common-substring-between-two-strings-using-python"""
+    res = pylcs.lcs_string_idx(s1, s2)
+    return ''.join([s2[i] for i in res if i != -1])
+
+def send_prompt(client, model: str, system_message: str, prompt: str) -> dict:
     return client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
@@ -18,29 +24,12 @@ def send_prompt(client, prompt: str) -> dict:
 def get_ai_response(response) -> str:
     return response.choices[0].message.content
 
-#def get_requirements_review(client, requirements: str) -> list:
-#    prompts = promptlib.review_requirements(requirements)
-#    resp_list=[]
-#    for prompt in prompts:
-#        resp_list.append(get_ai_response(send_prompt(client, prompt)))
-#    return resp_list
-
-def get_responses(client, prompts: list) -> list:
-    resp_list=[]
-    for prompt in tqdm(prompts):
-        resp_list.append(get_ai_response(send_prompt(client, prompt)))
-    return resp_list
-
-def get_review_summary(client) -> str:
-    pass
-
 def load_single_file(filepath):
 
     with open(filepath,'r', encoding='utf-8',errors='ignore') as f:
         return f.read()
 
 def write_string(s, filepath):
-
     with open(filepath,'w', encoding='utf-8',errors='ignore') as f:
         f.write(s)
 
@@ -95,7 +84,7 @@ def get_diff(list1,list2) -> list:
     s2 = set(list2)
     return list(s1.difference(s2))
 
-def replace_tokens(_str:str,replace_tokens:list, replace_with:str) -> str:
+def replace_tokens(_str:str, replace_tokens:list, replace_with:str) -> str:
     """Replace the list of tokens with the replace_with string for a given string
 
     Args:
