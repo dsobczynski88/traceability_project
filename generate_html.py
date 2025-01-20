@@ -16,7 +16,7 @@ def df_to_html(df):
             a.title(_t="Reviews and Revisions")
 
         with a.body():
-            with a.table():
+            with a.table(border='1px solid black'):
                 # Table header
                 with a.tr():
                     with a.th():
@@ -55,6 +55,5 @@ def df_to_html(df):
                                             a(tok)
                                     else:
                                         a(tok)
-                        break
     html = str(a)
     return html

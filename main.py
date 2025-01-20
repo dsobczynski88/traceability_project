@@ -13,8 +13,8 @@ from generate_html import df_to_html
 config = dotenv_values(".env")
 secret_key = config['OPENAI_API_KEY']
 client = OpenAI(api_key=secret_key)
-datapath = Path.cwd() / 'data' 
-filepath= datapath / 'requirements.csv'
+datapath = Path.cwd() / 'data'
+filepath= datapath / 'input' / 'requirements.csv'
 reqs = load_requirements(filepath)
 
 # Run the review
@@ -32,9 +32,3 @@ reviser = RevisionBuilder(
     attrs='revise',
     prompt_func=revise
 ).run()
-
-# Generate final word document output for useer validation
-df = pd.read_csv(f'{str(datapath)}/revise_1737265274.csv')
-html_str = df_to_html(df)
-fp = datapath / 'revise_1737264261.html'
-write_string(html_str, fp)

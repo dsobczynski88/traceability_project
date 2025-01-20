@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reviews and Revisions</title>
+  </head>
+  <body>
+    <table border="1px solid black">
+      <tr>
+        <th>
+          Reviews
+        </th>
+        <th>
+          Requirement
+        </th>
+        <th>
+          Revision
+        </th>
+        <th>
+          Feedback
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <span style="font-size:12px">The requirement is somewhat clear, but the term 'view access capability' could benefit from further specification. It is ambiguous whether this refers to read-only access or also the ability to filter or search for specific information. Additionally, defining 'authorized users' would clarify who is included. The requirement is vague regarding what constitutes 'view access capability.' It may be interpreted in multiple ways (e.g., what exactly can users view?). A more specific description of the type of information or functionality available through this access should be provided to ensure clarity.</span>
+        </td>
+        <td>
+          <span style="font-size:18px">The Disputes System shall provide view access capability for authorized users of the application.</span>
+        </td>
+        <td>
+          <span style="font-size:18px">
+            The
+            Disputes
+            System
+            shall
+            provide
+            <b style="color:red">
+              read-only
+            </b>
+            view
+            access
+            capability
+            for
+            authorized
+            <b style="color:red">
+              users,
+            </b>
+            <b style="color:red">
+              allowing
+            </b>
+            <b style="color:red">
+              them
+            </b>
+            <b style="color:red">
+              to
+            </b>
+            <b style="color:red">
+              filter
+            </b>
+            <b style="color:red">
+              and
+            </b>
+            <b style="color:red">
+              search
+            </b>
+            for
+            <b style="color:red">
+              specific
+            </b>
+            <b style="color:red">
+              transaction
+            </b>
+            <b style="color:red">
+              information.
+            </b>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span style="font-size:12px">Similar to the previous requirement, 'update access capability' is vague. It is unclear what specific updates can be made (e.g., editing or deleting transactions). Furthermore, specifying who qualifies as an 'authorized user' is necessary for a clear understanding of this requirement. Similar to the first requirement, 'update access capability' lacks specificity. It should explicitly detail what updates can be made (e.g., which fields can be modified, under what conditions), to eliminate ambiguity and provide a clearer understanding of the intended functionality.</span>
+        </td>
+        <td>
+          <span style="font-size:18px">The Disputes System shall provide update access capability for authorized users of the application.</span>
+        </td>
+        <td>
+          <span style="font-size:18px">
+            The
+            Disputes
+            System
+            shall
+            provide
+            update
+            access
+            capability
+            for
+            authorized
+            <b style="color:red">
+              users,
+            </b>
+            <b style="color:red">
+              detailing
+            </b>
+            <b style="color:red">
+              specific
+            </b>
+            <b style="color:red">
+              updates
+            </b>
+            <b style="color:red">
+              allowed
+            </b>
+            <b style="color:red">
+              (e.g.,
+            </b>
+            <b style="color:red">
+              editing
+            </b>
+            <b style="color:red">
+              transaction
+            </b>
+            <b style="color:red">
+              details,
+            </b>
+            <b style="color:red">
+              deleting
+            </b>
+            <b style="color:red">
+              records)
+            </b>
+            <b style="color:red">
+              and
+            </b>
+            <b style="color:red">
+              defining
+            </b>
+            the
+            <b style="color:red">
+              eligible
+            </b>
+            <b style="color:red">
+              'authorized
+            </b>
+            <b style="color:red">
+              users'.
+            </b>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span style="font-size:12px">This requirement is complex and may lead to varied interpretations. Clarifications are needed for terms like 'disputable transactions' and the method for determining age. Additionally, separating 'ticket retrieval request' and 'chargeback notification' into distinct requirements may improve clarity and verifiability. This requirement is more detailed; however, it could still be interpreted in different ways regarding 'disputable transactions' and the criteria for selection. Additional clarification on the definition of 'disputable transactions' and the exact process for initiating a dispute would enhance understanding and reduce ambiguity.</span>
+        </td>
+        <td>
+          <span style="font-size:18px">The Disputes System must allow the users to select disputable transactions (based on the age of the transaction) from a user interface and initiate a dispute (ticket retrieval request or chargeback notification) on the selected transaction.</span>
+        </td>
+        <td>
+          <span style="font-size:18px">
+            The
+            Disputes
+            System
+            must
+            allow
+            users
+            to
+            select
+            disputable
+            <b style="color:red">
+              transactions,
+            </b>
+            <b style="color:red">
+              where
+            </b>
+            disputable
+            transactions
+            <b style="color:red">
+              are
+            </b>
+            <b style="color:red">
+              defined
+            </b>
+            <b style="color:red">
+              as
+            </b>
+            <b style="color:red">
+              those
+            </b>
+            <b style="color:red">
+              older
+            </b>
+            <b style="color:red">
+              than
+            </b>
+            a
+            <b style="color:red">
+              specified
+            </b>
+            <b style="color:red">
+              threshold,
+            </b>
+            and
+            <b style="color:red">
+              they
+            </b>
+            must
+            <b style="color:red">
+              be
+            </b>
+            <b style="color:red">
+              able
+            </b>
+            to
+            initiate
+            a
+            <b style="color:red">
+              dispute,
+            </b>
+            <b style="color:red">
+              defined
+            </b>
+            <b style="color:red">
+              separately
+            </b>
+            <b style="color:red">
+              as
+            </b>
+            <b style="color:red">
+              either
+            </b>
+            a
+            <b style="color:red">
+              ticket
+            </b>
+            retrieval
+            request
+            or
+            a
+            chargeback
+            <b style="color:red">
+              notification.
+            </b>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span style="font-size:12px">While the requirement articulates a specific function, it lacks detail regarding how the system defines 'multiple transactions' or 'single merchant'. Clarification on what constitutes a 'single dispute case' is also necessary to ensure unambiguous interpretation. The phrase 'ability to initiate a single dispute case on multiple transactions' is somewhat clear, but it could be misinterpreted. Specifying how this process should occur, and any constraints (e.g., number of transactions, type of merchant), would benefit clarity and ensure a mutual understanding of the requirement.</span>
+        </td>
+        <td>
+          <span style="font-size:18px">The Disputes System must provide the user the ability to initiate a single dispute case on multiple transactions that belong to a single merchant.</span>
+        </td>
+        <td>
+          <span style="font-size:18px">
+            The
+            Disputes
+            System
+            must
+            provide
+            <b style="color:red">
+              users
+            </b>
+            the
+            ability
+            to
+            initiate
+            a
+            single
+            dispute
+            case
+            <b style="color:red">
+              involving
+            </b>
+            multiple
+            transactions
+            <b style="color:red">
+              from
+            </b>
+            the
+            <b style="color:red">
+              same
+            </b>
+            <b style="color:red">
+              merchant,
+            </b>
+            <b style="color:red">
+              with
+            </b>
+            <b style="color:red">
+              clear
+            </b>
+            <b style="color:red">
+              definitions
+            </b>
+            <b style="color:red">
+              of
+            </b>
+            <b style="color:red">
+              what
+            </b>
+            <b style="color:red">
+              constitutes
+            </b>
+            <b style="color:red">
+              'multiple
+            </b>
+            <b style="color:red">
+              transactions'
+            </b>
+            <b style="color:red">
+              and
+            </b>
+            <b style="color:red">
+              any
+            </b>
+            <b style="color:red">
+              applicable
+            </b>
+            <b style="color:red">
+              constraints.
+            </b>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span style="font-size:12px">The requirement is verbose and could be simplified. The phrase 'create or initiate a ticket retrieval request' introduces ambiguity; it should specify if both actions are necessary or if one suffices. Furthermore, detailing what 'all the required information' entails would strengthen the requirement's clarity and ensure it is verifiable. While this requirement provides more context, terms like 'all the required information' remain vaguely defined. Listing the required information explicitly and clarifying what constitutes 'ticket retrieval request' would improve understanding. Furthermore, there may be inconsistencies with verb usage ('will' vs. 'must') that should be standardized.</span>
+        </td>
+        <td>
+          <span style="font-size:18px">The Disputes System will provide the user the ability to create or initiate a ticket retrieval request. As part of ticket retrieval creation process the system must prompt the user to enter all the required information to create the ticket retrieval request. The ticket retrieval request is a document that is sent to merchant inquiring the validity of a transaction.</span>
+        </td>
+        <td>
+          <span style="font-size:18px">
+            The
+            Disputes
+            System
+            must
+            provide
+            <b style="color:red">
+              users
+            </b>
+            the
+            ability
+            to
+            create
+            a
+            ticket
+            retrieval
+            <b style="color:red">
+              request,
+            </b>
+            <b style="color:red">
+              specifying
+            </b>
+            the
+            required
+            information
+            <b style="color:red">
+              needed
+            </b>
+            <b style="color:red">
+              for
+            </b>
+            <b style="color:red">
+              submission,
+            </b>
+            <b style="color:red">
+              and
+            </b>
+            <b style="color:red">
+              clarifying
+            </b>
+            <b style="color:red">
+              whether
+            </b>
+            a
+            creation
+            or
+            <b style="color:red">
+              initiation
+            </b>
+            <b style="color:red">
+              action
+            </b>
+            is
+            <b style="color:red">
+              necessary.
+            </b>
+            The
+            ticket
+            retrieval
+            request
+            must
+            <b style="color:red">
+              be
+            </b>
+            <b style="color:red">
+              clearly
+            </b>
+            <b style="color:red">
+              defined.
+            </b>
+          </span>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -72,7 +72,7 @@ def summarize(review):
     $$$
     """
 
-def revise(requirements, reviews):
+def revise(requirements, context):
 
     return f"""
     Instructions
@@ -97,5 +97,5 @@ def revise(requirements, reviews):
     {requirements}
 
     Reviews:
-    {reviews}
+    {context}
     """
